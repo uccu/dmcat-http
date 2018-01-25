@@ -1,0 +1,28 @@
+{
+    "name": "uccu/dmcat-http",
+    "description": "request and response for dmcat",
+    "keywords": ["dmcat","http","pzcat"],
+    "homepage": "https://github.com/uccu/dmcat-http",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pzcat",
+            "email": "cat@4moe.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "uccu/dmcat-tool":"^0.2"
+    },
+    "autoload": {
+		"psr-4": {
+            "Uccu\\DmcatHttp\\": "Lib"
+		}
+	},
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
