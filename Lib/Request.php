@@ -108,7 +108,7 @@ class Request{
 
             return $this->muti($args[0],$name,$args[1]);
         }
-        empty($this->{$name}[$args[0]]) && $this->{$name}[$args[0]] = null;
+        !isset($this->{$name}[$args[0]]) && $this->{$name}[$args[0]] = null;
         return $this->filter($this->{$name}[$args[0]],$args[1]);
 
     }
