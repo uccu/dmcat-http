@@ -50,7 +50,7 @@ class Request{
             
         }elseif($name == 'file'){
 
-            return $this->$name = $_FILE;
+            return $this->$name = $_FILES;
 
         }elseif($name == 'cookie'){
 
@@ -61,7 +61,7 @@ class Request{
 
     }
 
-    private function muti($name,$way,$filter){
+    private function muti($name,$way,$filter = null){
 
         $name2 = [];
 
