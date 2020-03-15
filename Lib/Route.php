@@ -165,13 +165,10 @@ Class Route{
             if($class = $paramReflection->getClass()){
                 $class = $class->name;
                 if(method_exists($class,'getSingleInstance')){
-
-                    if($class=='Model'){
-                        $params[] = $class::copyMutiInstance($name);
-                        continue;
-                    }
-
                     $params[] = $class::getSingleInstance();
+                    continue;
+                }elseif(method_exists($class,'clone')){
+                    $params[] = $class::clone();
                     continue;
                 }
             }
